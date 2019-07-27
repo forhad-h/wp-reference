@@ -2,7 +2,13 @@
 
 // register ajax action 
 // here 'sals_play_time' is action name
-add_action('wp_ajax_Action_Name', 'Action_Function_Name');
+
+// for admin
+add_action('wp_ajax_sals_Action_Name', 'Action_Function_Name');
+
+// for guest
+add_action('wp_ajax_nopriv_Action_Name', 'Action_Function_Name');
+
 
 if(!function_exists('Action_Function_Name')) {
 
