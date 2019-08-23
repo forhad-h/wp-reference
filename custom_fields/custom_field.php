@@ -14,11 +14,12 @@ function theme_name_custom_fields($post_id)
 
 // add custom field "edit page" page loads
 if(is_admin()) {
-	function adding_custom_meta_boxes( $page ) {
-	    $has_post_meta = count(get_post_meta($page->ID, 'my_meta_key_name')) > 0;
+	function adding_custom_post_meta( $page ) {
+		$key_name = 'my_meta_key_name';
+	    $has_post_meta = count(get_post_meta($page->ID, $key_name)) > 0;
 	    if(!$has_post_meta) {
-            add_post_meta($page->ID, 'my_meta_key_name', '', true);
+            add_post_meta($page->ID, $key_name, 'default meta value', true);
 	    }
 	}
-	add_action( 'add_meta_boxes_page', 'adding_custom_meta_boxes');
+	add_action( 'add_meta_boxes_page', 'adding_custom_post_meta');
 }
