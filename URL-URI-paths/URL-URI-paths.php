@@ -15,8 +15,8 @@ echo get_theme_file_path(); // F:\xampp\htdocs\project_name/wp-content/themes/th
 
 // page url
 echo get_page_link(); // http://localhost/project_name/page_name/
-echo site_url(); // http://localhost/project_name/
-echo home_url(); // http://localhost/project_name/
+echo site_url('/'); // http://localhost/project_name/
+echo home_url(); // http://localhost/project_name
 echo get_home_url(); // http://localhost/project_name/
 echo get_permalink(); // http://localhost/project_name/page_name/
 
