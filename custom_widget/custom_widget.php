@@ -1,4 +1,10 @@
 <?php
+
+/**
+ * title is compulsory
+ * otv_category is a custom field
+*/
+
 // Register and load the widget
 function otv_cat_post_widget() {
     register_widget( 'otv_widget' );
