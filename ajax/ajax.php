@@ -3,7 +3,7 @@
 // register ajax action 
 
 // for admin
-add_action('wp_ajax_Action_Name', 'Action_Function_Name');
+add_action('wp_ajax_sals_Action_Name', 'Action_Function_Name');
 
 // for guest
 add_action('wp_ajax_nopriv_Action_Name', 'Action_Function_Name');
@@ -28,6 +28,8 @@ if(!function_exists('Action_Function_Name')) {
  * if ajax will be used in front-end
  * then 'ajaxurl' variable need to initialized and send to frontend
  * with wp_localize_script
+ * $handle = that particular script handle name in which script object will be used
+ * $object_name = javascript object name to work in javascript file
  */
 
 wp_localize_script($handle, $object_name, array(
