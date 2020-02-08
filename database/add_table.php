@@ -4,7 +4,8 @@
 require_once ("add_table.php");
 register_activation_hook( __FILE__, 'plugin_name_db_install' );
 
-// add to main plugin php file
+
+// add_table.php
 
 global $plugin_name_version;
 $plugin_name_version = '1.0';
