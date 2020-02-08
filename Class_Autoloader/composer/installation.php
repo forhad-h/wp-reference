@@ -1,7 +1,7 @@
 <?php
 
 /*
- * reference - search-product plugin
+ * reference - auto-parts-query plugin
  * run - composer install
 */
 
