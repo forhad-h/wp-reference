@@ -29,7 +29,7 @@ function plugin_name_db_install() {
 	) $charset_collate;";
 
 	require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
-	dbDelta( $query ); // array($cookie_info, $product_info, $visitor_info)
+	dbDelta( $query ); // string[]|string
 
 	add_option( 'plugin_name_version', $plugin_name_version );
 }
