@@ -24,13 +24,39 @@
   $pass = "thisISPass234";
 
   try {
+
+    /**
+     * Create User
+    */
+    $userProperties = [
+        'email' => $email,
+        'emailVerified' => false,
+        'password' => $pass,
+        'disabled' => false,
+    ];
+    $createdUser = $auth->createUser($userProperties);
+
+    /**
+     * Sign In
+    */
     $signInResult = $auth->signInWithEmailAndPassword($email, $pass);
+
+    /**
+     * Get uid ***/
     $uid = $signInResult->data()['localId'];
+
+    /**
+     * Set Custom attributes into user
+    */
     $customAtts = [
       'plan' => 'standard',
       'vidLimit' => 15,
     ];
     $updateUser = $auth->setCustomUserAttributes($uid, $customAtts);
+
+    /**
+     * Get User Info
+    */
     $user = $auth->getUser($uid);
     echo('Plan: ' . $user->customAttributes['plan']);
     echo '<br />';
