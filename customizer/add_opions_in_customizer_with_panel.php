@@ -9,7 +9,9 @@ function theme_footer_settings($wp_customize) {
       'title'          => __('Footer', 'twentyseventeen'),
       'description'    => '',
     ) );
-    
+    /*
+	It is possible to add section only
+    */
      // add sections under main panel
     $wp_customize->add_section('footer_left_options', array(
         'title' => __('Footer bottom left', 'twentyseventeen'),
@@ -30,7 +32,7 @@ function theme_footer_settings($wp_customize) {
     'settings' => 'footer_left_logo_one_image',
     ) ) );
     
-    $wp_customize->add_control( new WP_Customize_Control ( $wp_customize, 'footer_left_logo_one_url', array(
+    $wp_customize->add_control( new WP_Customize_Control ( $wp_customize, 'footer_left_logo_one_url_control', array(
         'label' => __('Upload footer left brand logo one url', 'twentyseventeen'),
         'section' => 'footer_left_options',
         'settings' => 'footer_left_logo_one_url',

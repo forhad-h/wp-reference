@@ -27,6 +27,11 @@ function wspp_auto_loader($class_name) {
 }
 
 /* uses */
+
+// define namespace
+namespace WSPP;
+
+// use namespace
 use WSPP\Admin_Notices;
 // or
 $admin_notices = new \WSPP\Admin_Notices();
