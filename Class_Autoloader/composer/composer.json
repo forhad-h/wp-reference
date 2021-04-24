@@ -1,6 +1,8 @@
+
 {
   "autoload": {
     "psr-4": {
+
       "BASE_NAMESPACE\\": "classes-files-base-directory"
     }
   }
