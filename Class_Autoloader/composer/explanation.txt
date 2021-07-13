@@ -1,0 +1,58 @@
+Autoload mapping
+
+# PSR-0
+{
+  "autoload": {
+    "psr-4": {
+      "Foo\\Bar": "src/"
+    }
+  }
+}
+
+* It will look for Foo\Bar\Baz in src/Foo/Bar/Baz.php
+* Like absolute path
+
+
+# PSR-4 
+
+{
+  "autoload": {
+    "psr-4": {
+      "Foo\\Bar": "src/"
+    }
+  }
+}
+
+
+it will look for Foo\Bar\Baz in src/Baz.php
+* Like relative path
+
+
+# classmap 
+
+{
+  "autoload": {
+    "psr-4": {
+      "classmap": ["src/", "lib/", "Something.php"]
+    }
+  }
+}
+
+
+* Classmap autoloading does not require aany certain file or directory structure.
+* It will recursively go through .php and .inc files in specified directories and files
+* any new class must be added by running composer dump-autoload
+
+# Files
+{
+  "autoload": {
+    "psr-4": {
+      "files": ["src/MyLibrary/functions.php"]
+    }
+  }
+}
+
+* useful if package includes PHP functions that cannot be autoloaded by PHP
+
+
+
