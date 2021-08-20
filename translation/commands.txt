@@ -1,0 +1,12 @@
+# locale would be something like - de_DE
+
+$ wp i18n make-pot . languages/my-plugin.pot
+
+$ cp my-plugin.pot my-plugin-{locale}.po
+
+# Generate .mo file from .po
+$ msgfmt -o my-plugin-{locale}.mo my-plugin-{locale}.po
+
+# Generate JSON file from .po
+wp i18n make-json my-plugin-{locale}.po --no-purge
+

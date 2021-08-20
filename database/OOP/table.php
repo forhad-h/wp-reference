@@ -17,7 +17,7 @@ class Table {
 
     $query = <<<QUERY
           CREATE TABLE IF NOT EXISTS {$this->table_name} (
-        		id mediumint(9) NOT NULL AUTO_INCREMENT,
+            id mediumint(9) NOT NULL AUTO_INCREMENT,
             year varchar(10),
             make varchar(100),
             model varchar(200),
