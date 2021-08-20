@@ -1,1 +1,5 @@
+# Generate autoload files
 $ composer dump-autoload
+
+# Install all dependencies
+$ composer install

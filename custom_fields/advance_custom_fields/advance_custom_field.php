@@ -2,7 +2,7 @@
 // ***************
        // advance custom field
        
-       // member_post_type would be my post type
+       // member_post_type would be my post type i.e member
 //***************
 
 function member_add_meta_box() {
