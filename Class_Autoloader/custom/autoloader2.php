@@ -13,9 +13,9 @@ function bpgci_auto_loader( $classname ) {
 
   if( false !== strpos( $classname, BPGCI_NAMESPACE ) ) {
 
-    $parts = explode( '\\', $classname );
+    $parts    = explode( '\\', $classname );
     $filename = 'class-' . str_replace( '_', '-', strtolower( array_pop( $parts ) ) ) ;
-    $filepath     = BPGCI_PATH . 'classes' . DIRECTORY_SEPARATOR . $filename . '.php';
+    $filepath = BPGCI_PATH . 'classes' . DIRECTORY_SEPARATOR . $filename . '.php';
 
     if(  file_exists( $filepath ) ) {
         include_once $filepath;
